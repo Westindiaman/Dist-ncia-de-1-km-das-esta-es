@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <style>
+      html, body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      #map {
+        /* configure the size of the map */
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      // initialize Leaflet
+      var map = L.map('map').setView({lon: -43.1729, lat: -22.9068}, 11);
+
+      // add the OpenStreetMap tiles
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+      }).addTo(map);
+
+      // show the scale bar on the lower left corner
+      L.control.scale().addTo(map);
+
+      // show a circle on the map
+      L.circle([-22.9325,-43.238611], 1000).bindPopup('Uruguai').addTo(map);
+      L.circle([-22.9236526,-43.2318928], 1000).bindPopup('Saens Peña').addTo(map);
+      L.circle([-22.9208733,-43.2237121], 1000).bindPopup('São Francisco Xavier (Metrô)').addTo(map);
+      L.circle([-22.9185607,-43.219254], 1000).bindPopup('Afonso Pena').addTo(map);
+      L.circle([-22.9135058,-43.2098689], 1000).bindPopup('Estácio').addTo(map);
+      L.circle([-22.9101381,-43.2001557], 1000).bindPopup('Praça Onze').addTo(map);
+      L.circle([-22.904444,-43.191389], 1000).bindPopup('Central (Metrô)').addTo(map);
+      L.circle([-22.903333,-43.185833], 1000).bindPopup('Presidente Vargas').addTo(map);
+      L.circle([-22.902778,-43.181111], 1000).bindPopup('Uruguaiana').addTo(map);
+      L.circle([-22.9075,-43.1775], 1000).bindPopup('Carioca').addTo(map);
+      L.circle([-22.910833,-43.175833], 1000).bindPopup('Cinelândia').addTo(map);
+      L.circle([-22.920556,-43.176944], 1000).bindPopup('Glória').addTo(map);
+      L.circle([-22.926111,-43.176667], 1000).bindPopup('Catete').addTo(map);
+      L.circle([-22.930833,-43.178333], 1000).bindPopup('Largo do Machado').addTo(map);
+      L.circle([-22.937222,-43.178333], 1000).bindPopup('Flamengo').addTo(map);
+      L.circle([-22.950278,-43.184167], 1000).bindPopup('Botafogo').addTo(map);
+      L.circle([-22.964722,-43.180556], 1000).bindPopup('Cardeal Arcoverde').addTo(map);
+      L.circle([-22.966944,-43.186667], 1000).bindPopup('Siqueira Campos').addTo(map);
+      L.circle([-22.976389,-43.193889], 1000).bindPopup('Cantagalo').addTo(map);
+      L.circle([-22.982778,-43.196389], 1000).bindPopup('General Osório').addTo(map);
+      L.circle([-22.983611,-43.206111], 1000).bindPopup('Nossa Senhora da Paz').addTo(map);
+      L.circle([-22.983056,-43.215278], 1000).bindPopup('Jardim de Alah').addTo(map);
+      L.circle([-22.985,-43.223333], 1000).bindPopup('Antero de Quental').addTo(map);
+      L.circle([-22.991944,-43.254444], 1000).bindPopup('São Conrado').addTo(map);
+      L.circle([-23.006389,-43.310556], 1000).bindPopup('Jardim Oceânico').addTo(map);
+      L.circle([-22.806667,-43.365], 1000).bindPopup('Pavuna').addTo(map);
+      L.circle([-22.815833,-43.358889], 1000).bindPopup('Engenheiro Rubens Paiva').addTo(map);
+      L.circle([-22.824444,-43.349722], 1000).bindPopup('Acari/Fazenda Botafogo').addTo(map);
+      L.circle([-22.831389,-43.343333], 1000).bindPopup('Coelho Neto').addTo(map);
+      L.circle([-22.842778,-43.334167], 1000).bindPopup('Colégio').addTo(map);
+      L.circle([-22.848056,-43.323333], 1000).bindPopup('Irajá').addTo(map);
+      L.circle([-22.854167,-43.313056], 1000).bindPopup('Vicente de Carvalho').addTo(map);
+      L.circle([-22.8625,-43.306667], 1000).bindPopup('Thomaz Coelho').addTo(map);
+      L.circle([-22.868056,-43.296667], 1000).bindPopup('Engenho da Rainha').addTo(map);
+      L.circle([-22.874722,-43.283333], 1000).bindPopup('Inhaúma').addTo(map);
+      L.circle([-22.879444,-43.271944], 1000).bindPopup('Nova América/Del Castilho').addTo(map);
+      L.circle([-22.881389,-43.260278], 1000).bindPopup('Maria da Graça').addTo(map);
+      L.circle([-22.896944,-43.244444], 1000).bindPopup('Triagem (Metrô)').addTo(map);
+      L.circle([-22.909722,-43.233889], 1000).bindPopup('Maracanã (Metrô)').addTo(map);
+      L.circle([-22.909722,-43.221111], 1000).bindPopup('São Cristóvão (Metrô)').addTo(map);
+      L.circle([-22.908889,-43.206389], 1000).bindPopup('Cidade Nova').addTo(map);
+      L.circle([-22.903733,-43.192711], 1000).bindPopup('Central do Brasil (Supervia)').addTo(map);
+      L.circle([-22.909853,-43.212922], 1000).bindPopup('Praça da Bandeira').addTo(map);
+      L.circle([-22.909625,-43.223039], 1000).bindPopup('São Cristóvão (Supervia)').addTo(map);
+      L.circle([-22.909272,-43.233817], 1000).bindPopup('Maracanã (Supervia)').addTo(map);
+      L.circle([-22.908539,-43.236697], 1000).bindPopup('Mangueira').addTo(map);
+      L.circle([-22.902703,-43.244172], 1000).bindPopup('São Francisco Xavier (Supervia)').addTo(map);
+      L.circle([-22.901503,-43.256236], 1000).bindPopup('Riachuelo').addTo(map);
+      L.circle([-22.901944,-43.262167], 1000).bindPopup('Sampaio').addTo(map);
+      L.circle([-22.903333,-43.270525], 1000).bindPopup('Engenho Novo').addTo(map);
+      L.circle([-22.901792,-43.278058], 1000).bindPopup('Méier').addTo(map);
+      L.circle([-22.895525,-43.293803], 1000).bindPopup('Olímpica de Engenho de Dentro').addTo(map);
+      L.circle([-22.890625,-43.309497], 1000).bindPopup('Piedade').addTo(map);
+      L.circle([-22.888519,-43.321247], 1000).bindPopup('Quintino').addTo(map);
+      L.circle([-22.883083,-43.327742], 1000).bindPopup('Cascadura').addTo(map);
+      L.circle([-22.876853,-43.337378], 1000).bindPopup('Madureira').addTo(map);
+      L.circle([-22.869342,-43.349836], 1000).bindPopup('Oswaldo Cruz').addTo(map);
+      L.circle([-22.864306,-43.3617], 1000).bindPopup('Prefeito Bento Ribeiro').addTo(map);
+      L.circle([-22.860758,-43.371189], 1000).bindPopup('Marechal Hermes').addTo(map);
+      L.circle([-22.854889,-43.383653], 1000).bindPopup('Deodoro').addTo(map);
+      L.circle([-22.904067,-43.275386], 1000).bindPopup('Silva Freire').addTo(map);
+      L.circle([-22.862478,-43.401944], 1000).bindPopup('Vila Militar').addTo(map);
+      L.circle([-22.868047,-43.413422], 1000).bindPopup('Magalhães Bastos').addTo(map);
+      L.circle([-22.874753,-43.429414], 1000).bindPopup('Realengo').addTo(map);
+      L.circle([-22.8751,-43.447469], 1000).bindPopup('Mocidade Padre Miguel').addTo(map);
+      L.circle([-22.875194,-43.456044], 1000).bindPopup('Guilherme da Silveira').addTo(map);
+      L.circle([-22.875353,-43.465758], 1000).bindPopup('Bangu').addTo(map);
+      L.circle([-22.875769,-43.486919], 1000).bindPopup('Senador Camará').addTo(map);
+      L.circle([-22.87935,-43.511069], 1000).bindPopup('Santíssimo').addTo(map);
+      L.circle([-22.892744,-43.537367], 1000).bindPopup('Augusto Vasconcelos').addTo(map);
+      L.circle([-22.902208,-43.560436], 1000).bindPopup('Campo Grande').addTo(map);
+      L.circle([-22.90625,-43.581547], 1000).bindPopup('Benjamin do Monte').addTo(map);
+      L.circle([-22.909036,-43.596017], 1000).bindPopup('Inhoaíba').addTo(map);
+      L.circle([-22.912794,-43.615231], 1000).bindPopup('Cosmos').addTo(map);
+      L.circle([-22.916222,-43.632958], 1000).bindPopup('Paciência').addTo(map);
+      L.circle([-22.91875,-43.649833], 1000).bindPopup('Tancredo Neves').addTo(map);
+      L.circle([-22.915714,-43.684181], 1000).bindPopup('Santa Cruz').addTo(map);
+      L.circle([-22.84055,-43.398444], 1000).bindPopup('Ricardo de Albuquerque').addTo(map);
+      L.circle([-22.824558,-43.403081], 1000).bindPopup('Anchieta').addTo(map);
+      L.circle([-22.817472,-43.410003], 1000).bindPopup('Olinda').addTo(map);
+      L.circle([-22.808697,-43.414886], 1000).bindPopup('Nilópolis').addTo(map);
+      L.circle([-22.796567,-43.422503], 1000).bindPopup('Édson Passos').addTo(map);
+      L.circle([-22.782819,-43.428647], 1000).bindPopup('Mesquita').addTo(map);
+      L.circle([-22.770936,-43.433967], 1000).bindPopup('Presidente Juscelino').addTo(map);
+      L.circle([-22.760653,-43.450022], 1000).bindPopup('Nova Iguaçu').addTo(map);
+      L.circle([-22.744708,-43.487825], 1000).bindPopup('Comendador Soares').addTo(map);
+      L.circle([-22.720347,-43.522981], 1000).bindPopup('Austin').addTo(map);
+      L.circle([-22.715772,-43.557106], 1000).bindPopup('Queimados').addTo(map);
+      L.circle([-22.679417,-43.605161], 1000).bindPopup('Engenheiro Pedreira').addTo(map);
+      L.circle([-22.644461,-43.653181], 1000).bindPopup('Japeri').addTo(map);
+      L.circle([-22.622128,-43.704664], 1000).bindPopup('Lages').addTo(map);
+      L.circle([-22.611839,-43.711019], 1000).bindPopup('Paracambi').addTo(map);
+      L.circle([-22.896467,-43.244406], 1000).bindPopup('Triagem (Supervia)').addTo(map);
+      L.circle([-22.883853,-43.255061], 1000).bindPopup('Jacarezinho').addTo(map);
+      L.circle([-22.880239,-43.270206], 1000).bindPopup('Del Castilho').addTo(map);
+      L.circle([-22.880414,-43.292206], 1000).bindPopup('Pilares').addTo(map);
+      L.circle([-22.869008,-43.304111], 1000).bindPopup('Tomás Coelho').addTo(map);
+      L.circle([-22.874442,-43.315586], 1000).bindPopup('Cavalcanti').addTo(map);
+      L.circle([-22.873344,-43.336792], 1000).bindPopup('Mercadão de Madureira').addTo(map);
+      L.circle([-22.854556,-43.351828], 1000).bindPopup('Rocha Miranda').addTo(map);
+      L.circle([-22.849389,-43.357194], 1000).bindPopup('Honório Gurgel').addTo(map);
+      L.circle([-22.832822,-43.366558], 1000).bindPopup('Barros Filho').addTo(map);
+      L.circle([-22.821858,-43.370197], 1000).bindPopup('Costa Barros').addTo(map);
+      L.circle([-22.805783,-43.366689], 1000).bindPopup('Pavuna/São João de Meriti').addTo(map);
+      L.circle([-22.793442,-43.375569], 1000).bindPopup('Vila Rosali').addTo(map);
+      L.circle([-22.788567,-43.381375], 1000).bindPopup('Agostinho Porto').addTo(map);
+      L.circle([-22.778422,-43.387519], 1000).bindPopup('Coelho da Rocha').addTo(map);
+      L.circle([-22.763861,-43.399964], 1000).bindPopup('Belford Roxo').addTo(map);
+      L.circle([-22.879625,-43.250906], 1000).bindPopup('Manguinhos').addTo(map);
+      L.circle([-22.866744,-43.255678], 1000).bindPopup('Bonsucesso').addTo(map);
+      L.circle([-22.855008,-43.2601], 1000).bindPopup('Ramos').addTo(map);
+      L.circle([-22.847272,-43.266208], 1000).bindPopup('Olaria').addTo(map);
+      L.circle([-22.840125,-43.279183], 1000).bindPopup('Penha').addTo(map);
+      L.circle([-22.836719,-43.284947], 1000).bindPopup('Penha Circular').addTo(map);
+      L.circle([-22.830242,-43.293086], 1000).bindPopup('Brás de Pina').addTo(map);
+      L.circle([-22.824083,-43.295864], 1000).bindPopup('Cordovil').addTo(map);
+      L.circle([-22.816239,-43.300706], 1000).bindPopup('Parada de Lucas').addTo(map);
+      L.circle([-22.805133,-43.305433], 1000).bindPopup('Vigário Geral').addTo(map);
+      L.circle([-22.787158,-43.309461], 1000).bindPopup('Duque de Caxias').addTo(map);
+      L.circle([-22.775667,-43.30735], 1000).bindPopup('Corte 8').addTo(map);
+      L.circle([-22.751672,-43.304164], 1000).bindPopup('Gramacho').addTo(map);
+      L.circle([-22.703986,-43.280803], 1000).bindPopup('Campos Elíseos').addTo(map);
+      L.circle([-22.690286,-43.262375], 1000).bindPopup('Jardim Primavera').addTo(map);
+      L.circle([-22.677717,-43.247194], 1000).bindPopup('Saracuruna').addTo(map);
+      L.circle([-22.6585,-43.230589], 1000).bindPopup('Morabi').addTo(map);
+      L.circle([-22.642242,-43.219489], 1000).bindPopup('Imbariê').addTo(map);
+      L.circle([-22.630278,-43.210444], 1000).bindPopup('Manoel Belo').addTo(map);
+      L.circle([-22.620667,-43.202256], 1000).bindPopup('Parada Angélica').addTo(map);
+      L.circle([-22.609261,-43.179528], 1000).bindPopup('Piabetá').addTo(map);
+      L.circle([-22.588753,-43.184369], 1000).bindPopup('Fragoso').addTo(map);
+      L.circle([-22.571647,-43.184928], 1000).bindPopup('Vila Inhomirim').addTo(map);
+      L.circle([-22.650244,-43.208156], 1000).bindPopup('Parque Estrela').addTo(map);
+      L.circle([-22.654022,-43.152528], 1000).bindPopup('Santa Dalila').addTo(map);
+      L.circle([-22.662972,-43.128972], 1000).bindPopup('Suruí').addTo(map);
+      L.circle([-22.665836,-43.092736], 1000).bindPopup('Santa Guilhermina').addTo(map);
+      L.circle([-22.653103,-43.066242], 1000).bindPopup('Parada Iriri').addTo(map);
+      L.circle([-22.65175,-43.042222], 1000).bindPopup('Magé').addTo(map);
+      L.circle([-22.635781,-43.030353], 1000).bindPopup('Jardim Nova Marília').addTo(map);
+      L.circle([-22.604825,-43.024553], 1000).bindPopup('Jororó').addTo(map);
+      L.circle([-22.592586,-43.014836], 1000).bindPopup('Citrolândia').addTo(map);
+      L.circle([-22.579494,-43.005225], 1000).bindPopup('Parada Ideal').addTo(map);
+      L.circle([-22.562586,-42.995003], 1000).bindPopup('Jardim Guapimirim').addTo(map);
+      L.circle([-22.545756,-42.985], 1000).bindPopup('Parada Modelo').addTo(map);
+      L.circle([-22.536811,-42.982186], 1000).bindPopup('Parada Bananal').addTo(map);
+      L.circle([-22.5195,-42.977194], 1000).bindPopup('Guapimirim').addTo(map);
+
+    </script>
+  </body>
+</html>
